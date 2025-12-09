@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap');
+
+/* src/components/auth/LoginForm.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  
+  /* --- ADD THESE LINES --- */
+ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./bg.webp');
+  background-size: cover;      /* Makes the image fill the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+}
+
+.login-form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 28px;
+  color: #1e3c72;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.login-subtitle {
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; /* Important for padding */
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-error {
+  color: #dc2626;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.toggle-view {
+  margin-top: 20px;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: 14px;
+}
+.toggle-view:hover {
+  text-decoration: underline;
+}
+
+/* Add this to your LoginForm.css file */
+
+/* Style for the button when it's disabled */
+.login-button:disabled {
+  background: linear-gradient(135deg, #9ca3af, #6b7280); /* A greyed-out gradient */
+  cursor: not-allowed;
+  transform: none; /* Prevent hover/active effects */
+}
+
+/* Style for inputs when they are disabled */
+.login-input:disabled {
+  background-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+/* Style for the toggle link to look disabled */
+.toggle-view:has-sibling(form button:disabled) {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
